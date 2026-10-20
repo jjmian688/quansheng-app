@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>全生工作台</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="全生工作台">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#1d5a4c">
+<style>
+html,body{margin:0;height:100%;background:#f1f4f2;overflow:hidden}
+iframe{position:fixed;inset:0;width:100%;height:100%;border:0;padding-top:env(safe-area-inset-top,0px);box-sizing:border-box;background:#f1f4f2}
+#ld{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;font:15px/1.5 system-ui,sans-serif;color:#5a6a64;transition:opacity .3s}
+#ld img{width:88px;height:88px;border-radius:20px}
+</style>
+</head>
+<body>
+<div id="ld"><img src="icon-192.png" alt=""><div>載入中…</div></div>
+<iframe id="app" title="全生工作台" src="https://script.google.com/macros/s/AKfycbwRlxJWk8FjQ0ylLeFo1wfpzKSNLcmSO5F-iYBKLgtdoPkrI9xnvHflgr-oBPeicvtV/exec" allow="camera; clipboard-write"></iframe>
+<script>
+document.getElementById('app').addEventListener('load',function(){var l=document.getElementById('ld');l.style.opacity=0;setTimeout(function(){l.remove()},300)});
+</script>
+</body>
+</html>
